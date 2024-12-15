@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import Main from "./pages/main.tsx";
 import Mates from "./pages/mates.tsx";
 import Tasks from "./pages/tasks.tsx";
+import Ranking from "./pages/ranking.tsx";
 
 WebApp.ready();
 
@@ -16,6 +17,7 @@ createRoot(document.getElementById("root")!).render(
       <Route path="/main" element={<Main />} />
       <Route path="/mates" element={<Mates />} />
       <Route path="/tasks" element={<Tasks />} />
+      <Route path="/ranking" element={<Ranking />} />
     </Routes>
   </BrowserRouter>
 );
