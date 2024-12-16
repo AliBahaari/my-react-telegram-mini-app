@@ -1,6 +1,6 @@
-import WebApp from "@twa-dev/sdk";
-import "./App.css";
-import { Button } from "@/components/ui/button";
+import WebApp from '@twa-dev/sdk'
+import './App.css'
+import { Button } from '@/components/ui/button'
 
 function App() {
   return (
@@ -10,8 +10,10 @@ function App() {
       <button onClick={() => WebApp.showAlert(`Hello World!`)}>
         Show Alert
       </button>
+      {WebApp.initData}
+      {JSON.stringify(WebApp.initData)}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
