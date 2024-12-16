@@ -7,6 +7,7 @@ import Main from "./pages/main.tsx";
 import Mates from "./pages/mates.tsx";
 import Tasks from "./pages/tasks.tsx";
 import Ranking from "./pages/ranking.tsx";
+import Stats from "./pages/stats.tsx";
 
 WebApp.ready();
 
@@ -18,6 +19,7 @@ createRoot(document.getElementById("root")!).render(
       <Route path="/mates" element={<Mates />} />
       <Route path="/tasks" element={<Tasks />} />
       <Route path="/ranking" element={<Ranking />} />
+      <Route path="/stats" element={<Stats />} />
     </Routes>
   </BrowserRouter>
 );
