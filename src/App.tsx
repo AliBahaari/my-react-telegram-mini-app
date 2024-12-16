@@ -11,7 +11,7 @@ function App() {
         Show Alert
       </button>
       {WebApp.initData}
-      {JSON.stringify(WebApp.initData)}
+      {JSON.stringify(WebApp.initDataUnsafe)}
     </div>
   )
 }
