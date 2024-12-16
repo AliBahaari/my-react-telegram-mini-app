@@ -10,8 +10,8 @@ function App() {
       <button onClick={() => WebApp.showAlert(`Hello World!`)}>
         Show Alert
       </button>
-      {WebApp.initData}
-      {JSON.stringify(WebApp.initDataUnsafe)}
+
+      {WebApp.initDataUnsafe.user?.username}
     </div>
   )
 }
