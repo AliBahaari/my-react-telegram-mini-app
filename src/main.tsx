@@ -9,6 +9,7 @@ import Tasks from "./pages/tasks.tsx";
 import Ranking from "./pages/ranking.tsx";
 import Stats from "./pages/stats.tsx";
 import Wallet from "./pages/wallet.tsx";
+import LanguageSelection from "./pages/language-selection.tsx";
 
 WebApp.ready();
 
@@ -22,6 +23,7 @@ createRoot(document.getElementById("root")!).render(
       <Route path="/ranking" element={<Ranking />} />
       <Route path="/stats" element={<Stats />} />
       <Route path="/wallet" element={<Wallet />} />
+      <Route path="/language-selection" element={<LanguageSelection />} />
     </Routes>
   </BrowserRouter>
 );
