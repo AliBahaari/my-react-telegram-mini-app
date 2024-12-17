@@ -10,6 +10,7 @@ import Ranking from "./pages/ranking.tsx";
 import Stats from "./pages/stats.tsx";
 import Wallet from "./pages/wallet.tsx";
 import LanguageSelection from "./pages/language-selection.tsx";
+import Agreement from "./pages/agreement.tsx";
 
 WebApp.ready();
 
@@ -24,6 +25,7 @@ createRoot(document.getElementById("root")!).render(
       <Route path="/stats" element={<Stats />} />
       <Route path="/wallet" element={<Wallet />} />
       <Route path="/language-selection" element={<LanguageSelection />} />
+      <Route path="/agreement" element={<Agreement />} />
     </Routes>
   </BrowserRouter>
 );
