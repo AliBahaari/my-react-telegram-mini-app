@@ -3,7 +3,7 @@ import App from "./App.tsx";
 import WebApp from "@twa-dev/sdk";
 import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router";
-import Main from "./pages/main.tsx";
+import Main from "./pages/main/index.tsx";
 import Mates from "./pages/mates.tsx";
 import Tasks from "./pages/tasks.tsx";
 import Ranking from "./pages/ranking.tsx";
@@ -11,8 +11,8 @@ import Stats from "./pages/stats.tsx";
 import Wallet from "./pages/wallet.tsx";
 import LanguageSelection from "./pages/language-selection.tsx";
 import Agreement from "./pages/agreement.tsx";
-import InvestOnTruedapp from "./pages/invest-on-truedapp.tsx";
-import BuyTGM from "./pages/buy-tgm.tsx";
+import InvestOnTruedapp from "./pages/main/invest-on-truedapp.tsx";
+import BuyTGM from "./pages/main/buy-tgm.tsx";
 
 WebApp.ready();
 
