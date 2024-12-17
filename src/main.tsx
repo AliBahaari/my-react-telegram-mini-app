@@ -11,8 +11,8 @@ import Stats from "./pages/stats.tsx";
 import Wallet from "./pages/wallet.tsx";
 import LanguageSelection from "./pages/language-selection.tsx";
 import Agreement from "./pages/agreement.tsx";
-import InvestOnTruedapp from "./pages/invest_on_truedapp.tsx";
-import BuyTGM from "./pages/buy_tgm.tsx";
+import InvestOnTruedapp from "./pages/invest-on-truedapp.tsx";
+import BuyTGM from "./pages/buy-tgm.tsx";
 
 WebApp.ready();
 
