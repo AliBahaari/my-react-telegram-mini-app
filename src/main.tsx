@@ -12,6 +12,7 @@ import Wallet from "./pages/wallet.tsx";
 import LanguageSelection from "./pages/language-selection.tsx";
 import Agreement from "./pages/agreement.tsx";
 import InvestOnTruedapp from "./pages/invest_on_truedapp.tsx";
+import BuyTGM from "./pages/buy_tgm.tsx";
 
 WebApp.ready();
 
@@ -28,6 +29,7 @@ createRoot(document.getElementById("root")!).render(
       <Route path="/language-selection" element={<LanguageSelection />} />
       <Route path="/agreement" element={<Agreement />} />
       <Route path="/invest-on-truedapp" element={<InvestOnTruedapp />} />
+      <Route path="/buy-tgm" element={<BuyTGM />} />
     </Routes>
   </BrowserRouter>
 );
