@@ -1,13 +1,5 @@
 import Default from "@/components/layout/default";
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { thousandCommaSeparator } from "@/lib/utils";
 
 function Ranking() {
