@@ -11,31 +11,40 @@ import LanguageSelection from "./pages/language-selection.tsx";
 import Agreement from "./pages/agreement.tsx";
 import InvestOnTruedapp from "./pages/main/invest-on-truedapp.tsx";
 import BuyTGM from "./pages/main/buy-tgm.tsx";
+import Loading from "./components/ui/loading.tsx";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    setInterval(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
+
   return (
-    <div className="m-10">
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/main" element={<Main />} />
-        <Route path="/mates" element={<Mates />} />
-        <Route path="/tasks" element={<Tasks />} />
-        <Route path="/ranking" element={<Ranking />} />
-        <Route path="/stats" element={<Stats />} />
-        <Route path="/wallet" element={<Wallet />} />
-        <Route path="/language-selection" element={<LanguageSelection />} />
-        <Route path="/agreement" element={<Agreement />} />
-        <Route path="/invest-on-truedapp" element={<InvestOnTruedapp />} />
-        <Route path="/buy-tgm" element={<BuyTGM />} />
-      </Routes>
-      {/* <h1 className="text-3xl font-bold underline">Hello World!</h1>
-      <Button>Click Me</Button>
-      <button onClick={() => WebApp.showAlert(`Hello World!`)}>
-        Show Alert
-      </button>
- */}
-      {WebApp.initDataUnsafe.user?.username}
-    </div>
+    <>
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <div className="m-10">
+          <Routes>
+            <Route path="/main" element={<Main />} />
+            <Route path="/mates" element={<Mates />} />
+            <Route path="/tasks" element={<Tasks />} />
+            <Route path="/ranking" element={<Ranking />} />
+            <Route path="/stats" element={<Stats />} />
+            <Route path="/wallet" element={<Wallet />} />
+            <Route path="/language-selection" element={<LanguageSelection />} />
+            <Route path="/agreement" element={<Agreement />} />
+            <Route path="/invest-on-truedapp" element={<InvestOnTruedapp />} />
+            <Route path="/buy-tgm" element={<BuyTGM />} />
+          </Routes>
+          {WebApp.initDataUnsafe.user?.username}
+        </div>
+      )}
+    </>
   );
 }
 
