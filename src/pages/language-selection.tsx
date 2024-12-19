@@ -1,20 +1,20 @@
 import { Button } from "@/components/ui/button";
+import { LanguageContext } from "@/contexts/languageContext";
+import { languages } from "@/lib/languages";
+import { useContext } from "react";
 
 function LanguageSelection() {
+  const { selectLanguage } = useContext(LanguageContext);
+
   return (
     <div className="flex flex-col gap-3 justify-center items-center">
       <h2>Select your Language:</h2>
       <div className="flex flex-col w-full gap-4 px-4">
-        <Button>English</Button>
-        <Button>Spanish</Button>
-        <Button>Chinese</Button>
-        <Button>Arabic</Button>
-        <Button>Portuguese</Button>
-        <Button>Russian</Button>
-        <Button>Indonesian</Button>
-        <Button>German</Button>
-        <Button>Japanese</Button>
-        <Button>French</Button>
+        {languages.map((language, index) => (
+          <Button key={index} onClick={() => selectLanguage(language.name)}>
+            {language.name}
+          </Button>
+        ))}
       </div>
     </div>
   );
