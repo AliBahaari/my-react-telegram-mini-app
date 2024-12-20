@@ -1,6 +1,13 @@
 import React, { createContext, useState } from "react";
 
-const LanguageContext = createContext({});
+interface LanguageContextType {
+  language: string;
+  selectLanguage: (lang: string) => void;
+}
+
+const LanguageContext = createContext<LanguageContextType | undefined>(
+  undefined
+);
 
 interface LanguageProviderProps {
   children?: React.ReactNode;
