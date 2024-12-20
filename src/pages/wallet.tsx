@@ -1,3 +1,4 @@
+import Default from "@/components/layout/default";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -26,7 +27,7 @@ function Wallet() {
   ];
 
   return (
-    <div>
+    <Default>
       <Card className="pt-6">
         {steps.map((step, index) => (
           <CardContent>
@@ -85,12 +86,12 @@ function Wallet() {
         <Button className="mt-2 w-1/4">Disconnect</Button>
       </div>
 
-      <div className="flex flex-col w-full absolute bottom-0">
+      <div className="flex flex-col w-full">
         <Button className="w-full rounded-none">
           Buy TGM xx% below estimated listing price
         </Button>
       </div>
-    </div>
+    </Default>
   );
 }
 
