@@ -9,20 +9,31 @@ function Wallet() {
   const connectedAddress = "UQDHy..jKbUZ";
   const steps = [
     {
-      name: "Game launched",
+      name: "App launched",
       done: true,
     },
     {
-      name: "Growing community",
-      done: true,
-    },
-    {
-      name: "Blockchain selection",
+      name: "Community growing",
       done: true,
     },
     {
       name: "Exchange listing",
       done: false,
+    },
+  ];
+
+  const wallets = [
+    {
+      name: "Toncoin",
+      amount: 43522,
+    },
+    {
+      name: "Tapcoin",
+      amount: 6243,
+    },
+    {
+      name: "Solana",
+      amount: 342564,
     },
   ];
 
@@ -44,44 +55,22 @@ function Wallet() {
         ))}
       </Card>
 
-      <Card className="my-3">
-        <div className="flex flex-row py-4">
-          <div className="flex flex-1 justify-center items-center">
-            <img src={walletImage} width="250px" height="250px" alt="Wallet" />
-          </div>
-          <div className="flex flex-1 flex-col justify-between">
-            <div className="flex flex-col">
+      <Card className="my-8">
+        <div className="flex flex-row p-4 justify-between">
+          {wallets.map((wallet, index) => (
+            <div className="flex flex-col" key={index}>
               <div>
-                <p>Toncoin</p>
+                <p>{wallet.name}:</p>
               </div>
-              <div>
-                <span>{thousandCommaSeparator(43253)}</span>
+              <div className="ps-2">
+                <span>{thousandCommaSeparator(wallet.amount)}</span>
               </div>
             </div>
-            <div className="flex flex-col">
-              <div>
-                <p>W-Coin</p>
-              </div>
-              <div>
-                <span>{thousandCommaSeparator(43253)}</span>
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <div>
-                <p>WAI</p>
-              </div>
-              <div>
-                <span>{thousandCommaSeparator(43253)}</span>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </Card>
       <div className="my-2 px-4">
-        <p>
-          Account Verified <span></span>
-        </p>
-        <p>Connected Address: {connectedAddress}</p>
+        <p>Connected Wallet: {connectedAddress}</p>
 
         <Button className="mt-2 w-1/4">Disconnect</Button>
       </div>
