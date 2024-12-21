@@ -1,16 +1,20 @@
 const url = import.meta.env.SERVER_URL + "/tasks";
 
 export async function create(payload: { title: string; reward: number }) {
-  return await fetch(url + "/create", {
+  const result = await fetch(url + "/create", {
     method: "POST",
     body: JSON.stringify(payload),
   });
+
+  return await result.json();
 }
 
 export async function findAll() {
-  return await fetch(url + "/findAll");
+  const result = await fetch(url + "/findAll");
+  return await result.json();
 }
 
 export async function findOne(id: string) {
-  return await fetch(url + `/findOne/${id}`);
+  const result = await fetch(url + `/findOne/${id}`);
+  return await result.json();
 }

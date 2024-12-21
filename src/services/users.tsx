@@ -1,36 +1,46 @@
 const url = import.meta.env.SERVER_URL + "/users";
 
 export async function create(payload: { initData: string }) {
-  return await fetch(url + "/create", {
+  const result = await fetch(url + "/create", {
     method: "POST",
     body: JSON.stringify(payload),
   });
+
+  return await result.json();
 }
 
 export async function findAll() {
-  return await fetch(url + "/findAll");
+  const result = await fetch(url + "/findAll");
+  return await result.json();
 }
 
 export async function findOne(initData: string) {
-  return await fetch(url + `/findOne/${initData}`);
+  const result = await fetch(url + `/findOne/${initData}`);
+  return await result.json();
 }
 
 export async function findStats(initData: string) {
-  return await fetch(url + `/findStats/${initData}`);
+  const result = await fetch(url + `/findStats/${initData}`);
+  return await result.json();
 }
 
 export async function findAllUsersCount() {
-  return await (url + "/findAllUsersCount");
+  const result = await fetch(url + "/findAllUsersCount");
+  return await result.json();
 }
 
 export async function update(referralCode: string) {
-  return await fetch(url + `/update/${referralCode}`, {
+  const result = await fetch(url + `/update/${referralCode}`, {
     method: "PATCH",
   });
+
+  return await result.json();
 }
 
 export async function updateUserTask(initData: string, taskId: number) {
-  return await fetch(url + `/updateUserTask/${initData}/${taskId}`, {
+  const result = await fetch(url + `/updateUserTask/${initData}/${taskId}`, {
     method: "PATCH",
   });
+
+  return await result.json();
 }
