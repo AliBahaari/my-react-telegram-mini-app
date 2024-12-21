@@ -1,4 +1,4 @@
-const url = import.meta.env.SERVER_URL + "/users";
+const url = import.meta.env.VITE_SERVER_URL + "/users";
 
 export async function create(payload: { initData: string }) {
   const result = await fetch(url + "/create", {
