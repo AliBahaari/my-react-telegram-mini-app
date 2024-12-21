@@ -2,30 +2,25 @@ import Default from "@/components/layout/default";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { findAll } from "@/services/tasks";
+import { Task } from "@/types/task";
+import { useEffect, useState } from "react";
 
 function Tasks() {
-  const tasks = [
-    {
-      name: "Play 1",
-      reward: 20000,
-      imageSrc: "https://github.com/shadcn.png",
-    },
-    {
-      name: "Play 2",
-      reward: 20000,
-      imageSrc: "https://github.com/shadcn.png",
-    },
-    {
-      name: "Play 3",
-      reward: 500000,
-      imageSrc: "https://github.com/shadcn.png",
-    },
-  ];
+  const [tasks, setTasks] = useState<Task[]>([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const result = await findAll();
+      setTasks(result);
+    }
+    fetchData();
+  }, []);
 
   return (
     <Default>
       <div className="text-center p-6">
-        <h3>Earn W-coin rewards by completing simple tasks</h3>
+        <h3>Earn Truecoins by completing the tasks below:</h3>
       </div>
 
       <Card className="pt-6">
@@ -34,12 +29,12 @@ function Tasks() {
             <div className="flex flex-row items-center justify-between">
               <div className="flex flex-row items-center gap-3">
                 <Avatar>
-                  <AvatarImage src={task.imageSrc} />
-                  <AvatarFallback>{task.name}</AvatarFallback>
+                  <AvatarImage src={""} />
+                  <AvatarFallback>{task.title}</AvatarFallback>
                 </Avatar>
                 <div className="flex flex-col gap-1">
                   <div>
-                    <p>{task.name}</p>
+                    <p>{task.title}</p>
                   </div>
                   <div>
                     <p>
