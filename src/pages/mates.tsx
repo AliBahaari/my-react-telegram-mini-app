@@ -23,7 +23,7 @@ function Mates() {
           <Card className="mt-6">
             <CardHeader>
               <div className="flex flex-row justify-between">
-                <CardTitle>My Mates(1)</CardTitle>
+                <CardTitle>My Friends(1)</CardTitle>
                 <CardDescription>Total Amount: 0</CardDescription>
               </div>
             </CardHeader>
@@ -44,8 +44,8 @@ function Mates() {
           </Card>
         </div>
         <div className="flex flex-row w-full">
-          <Button className="rounded-none w-1/2">Invite a Mate</Button>
-          <Button className="rounded-none w-1/2">Share a Link</Button>
+          <Button className="rounded-none w-1/2">Invite a Friend</Button>
+          <Button className="rounded-none w-1/2">Share Link</Button>
         </div>
       </div>
     </Default>

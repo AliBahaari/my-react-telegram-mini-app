@@ -28,7 +28,7 @@ function Stats() {
               <h1 className="text-2xl">Total Tap Investment</h1>
             </div>
             <div>
-              <h4>Total Mates</h4>
+              <h4>Total Users</h4>
               <div className="flex flex-row items-center gap-4">
                 <Avatar>
                   <AvatarImage src="https://github.com/shadcn.png" />
@@ -38,7 +38,7 @@ function Stats() {
               </div>
             </div>
             <div>
-              <h4>Daily Mates</h4>
+              <h4>Daily Users</h4>
               <div className="flex flex-row items-center gap-4">
                 <Avatar>
                   <AvatarImage src="https://github.com/shadcn.png" />
@@ -48,7 +48,7 @@ function Stats() {
               </div>
             </div>
             <div>
-              <h4>Online Mates</h4>
+              <h4>Online Users</h4>
               <div className="flex flex-row items-center gap-4">
                 <Avatar>
                   <AvatarImage src="https://github.com/shadcn.png" />
