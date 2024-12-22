@@ -13,6 +13,7 @@ import InvestOnTruedapp from "./pages/main/invest-on-truedapp.tsx";
 import BuyTGM from "./pages/main/buy-tgm.tsx";
 import Loading from "./components/ui/loading.tsx";
 import { useEffect, useState } from "react";
+import TonConnectPage from "./pages/TonConnect.tsx";
 
 function App() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -40,6 +41,7 @@ function App() {
             <Route path="/agreement" element={<Agreement />} />
             <Route path="/invest-on-truedapp" element={<InvestOnTruedapp />} />
             <Route path="/buy-tgm" element={<BuyTGM />} />
+            <Route path="/ton-connect" element={<TonConnectPage />} />
           </Routes>
           {WebApp.initDataUnsafe.user?.username}
         </div>
