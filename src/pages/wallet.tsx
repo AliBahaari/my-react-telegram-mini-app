@@ -5,7 +5,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { thousandCommaSeparator } from "@/lib/utils";
 
 function Wallet() {
-  const walletImage = "https://github.com/shadcn.png";
   const connectedAddress = "UQDHy..jKbUZ";
   const steps = [
     {

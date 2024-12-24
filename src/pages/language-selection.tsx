@@ -4,7 +4,11 @@ import { languages } from "@/lib/languages";
 import { useContext } from "react";
 
 function LanguageSelection() {
-  const { selectLanguage } = useContext(LanguageContext);
+  const languageContext = useContext(LanguageContext);
+  if (!languageContext) {
+    return <div>Error: Language context is not available</div>;
+  }
+  const { selectLanguage } = languageContext;
 
   return (
     <div className="flex flex-col gap-3 justify-center items-center">
